@@ -110,7 +110,7 @@ $$x_i \sim \text{Beta}(\alpha=p_i/(1-\sum_{j\in A(i)}p_j),\beta=1)$$
 where the $p_i$ is an initial approximation of the duration of the
 branch length expressed as a fraction of the sampling time:
 
-$$p_i=\text{min}_{j\in D(i)}\left((m_j+1)/(\sum_{k\in A(j)}\left(m_k+1\right))\right)$$
+$$p_i=\text{min}_{j\in D(i)}\left(\frac{m_j+1}{\sum_{k\in A(j)}\left(m_k+1\right)}\right) $$
 
 Note that the overdispersion parameter is rescaled so that it is
 comparable across branches with different mutation burden.
