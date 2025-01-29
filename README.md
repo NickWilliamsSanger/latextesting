@@ -60,12 +60,12 @@ $$ t_j=x_j  \text{min}({T_k:k \in D(j)}) $$
 
 For other interior edges, $i$, we have
 
-$$ t_i=\left(\text{min}{{T_k:k \in D(i)}}-\sum_{j\in A(i)} t_j\right)x_i $$
+$$ t_i=\left(\text{min}\left(T_k:k \in D(i)\right) -\sum_{j\in A(i)} t_j\right)x_i $$
 
 The duration of the terminal edges is fixed by the values of $t_i$ on
 the interior edges and the overall duration constraint:
 
-$$ t_i=\text{min}\left\{{T_k:k \in D(i)}\right\}-\sum_{j\in A(i)} t_j $$
+$$ t_i=\text{min}\left(T_k:k \in D(i)\right)-\sum_{j\in A(i)} t_j $$
 
 We assume that there are $p-1$ change points in the tree corresponding
 to the acquisition of driver mutations. This results in $p$ mutation
@@ -109,7 +109,7 @@ $$x_i \sim \text{Beta}(\alpha=p_i/(1-\sum_{j\in A(i)}p_j),\beta=1)$$
 
 where the $p_i$ is an initial approximation of the duration of the
 branch length expressed as a fraction of the sampling time:
-$$p_i=\text{min}_{j\in D(i)}\left\{(m_j+1)/(\sum_{k\in A(j)}\left(m_k+1\right))\right\}$$
+$$p_i=\text{min}_{j\in D(i)}\left((m_j+1)/(\sum_{k\in A(j)}\left(m_k+1\right))\right)$$
 
 Note that the overdispersion parameter is rescaled so that it is
 comparable across branches with different mutation burden.
