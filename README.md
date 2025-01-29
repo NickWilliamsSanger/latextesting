@@ -60,7 +60,7 @@ $$ t_j=x_j  \text{min}({T_k:k \in D(j)}) $$
 
 For other interior edges, $i$, we have
 
-$$ t_i=\left(\text{min}\left\{{T_k:k \in D(i)}\right\}-\sum_{j\in A(i)} t_j\right)x_i $$
+$$ t_i=\left(\text{min}\left{{T_k:k \in D(i)}\right}-\sum_{j\in A(i)} t_j\right)x_i $$
 
 The duration of the terminal edges is fixed by the values of $t_i$ on
 the interior edges and the overall duration constraint:
